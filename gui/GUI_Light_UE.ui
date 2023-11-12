@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>830</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1100</width>
+      <height>830</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#Browse_btn_1{
+	background-color:  #000000;
+	color:#fff;
+	border-radius:5px;
+}
+
+QPushButton#Browse_btn_1:hover{
+	background-color: #1c1f23;
+}
+
+QPushButton#Browse_btn_1:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:#0e1856;
+}
+
+QPushButton#Browse_btn_2{
+	background-color:  #000000;
+	color:#fff;
+	border-radius:5px;
+}
+
+QPushButton#Browse_btn_2:hover{
+	background-color: #1c1f23;
+}
+
+QPushButton#Browse_btn_2:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:#0e1856;
+}
+
+QPushButton#SetSettings_btn{
+	background-color:  #000000;
+	color:#fff;
+	border-radius:5px;
+}
+
+QPushButton#SetSettings_btn:hover{
+	background-color: #1c1f23;
+}
+
+QPushButton#SetSettings_btn:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:#0e1856;
+}
+
+QPushButton#Start_RL_btn{
+	background-color:  #000000;
+	color:#fff;
+	border-radius:5px;
+}
+
+QPushButton#Start_RL_btn:hover{
+	background-color: #1c1f23;
+}
+
+QPushButton#Start_RL_btn:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:#0e1856;
+}</string>
+    </property>
+    <widget class="QLabel" name="Background_Rechts">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>0</y>
+       <width>650</width>
+       <height>850</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#FAFAFA;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Meshes_Distances">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>50</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #000000;</string>
+     </property>
+     <property name="text">
+      <string>Meshes distances:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Min_Distance">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>110</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>12</pointsize>
+       <weight>3</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Min Distance</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Max_Distance">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>110</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Max Distance</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Step_Distance">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>110</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Step Distance</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Light_Distributions">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>190</y>
+       <width>291</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#000000;</string>
+     </property>
+     <property name="text">
+      <string>Light distributions:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Right_Light">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>250</y>
+       <width>421</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Choose the right light distribution...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Left_Light">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>320</y>
+       <width>421</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Choose the left light distribution...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Browse_btn_1">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>250</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Browse_btn_2">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>320</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Detection_Objects">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>400</y>
+       <width>271</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#000000;</string>
+     </property>
+     <property name="text">
+      <string>Object detection:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Assets_Folder">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>460</y>
+       <width>551</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>12</pointsize>
+       <weight>3</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Choose the assets folder... (/Game/Detektionsobjekte)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Substring_Detection">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>520</y>
+       <width>551</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>12</pointsize>
+       <weight>3</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Choose the substring of the detection objects (Puppe)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Render_Settings">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>600</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#000000;</string>
+     </property>
+     <property name="text">
+      <string>Render settings:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Resolution_X">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>660</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Output Resolution X...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Resolution_Y">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>660</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid #000000;
+color:#000000;
+font: 25 12pt &quot;Roboto&quot;;
+padding-bottom:7px;
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Output Resolution Y...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SetSettings_btn">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>740</y>
+       <width>281</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SET SETTINGS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Background_Left">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>451</width>
+       <height>850</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/image/Background.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/image/Background.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="iPeG_logo">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>750</y>
+       <width>231</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/image/IPeG_Logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Start_RL_btn">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>740</y>
+       <width>281</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>START RL</string>
+     </property>
+    </widget>
+    <zorder>Background_Rechts</zorder>
+    <zorder>Background_Left</zorder>
+    <zorder>SetSettings_btn</zorder>
+    <zorder>iPeG_logo</zorder>
+    <zorder>Min_Distance</zorder>
+    <zorder>Meshes_Distances</zorder>
+    <zorder>Step_Distance</zorder>
+    <zorder>Max_Distance</zorder>
+    <zorder>Light_Distributions</zorder>
+    <zorder>Browse_btn_2</zorder>
+    <zorder>Left_Light</zorder>
+    <zorder>Browse_btn_1</zorder>
+    <zorder>Right_Light</zorder>
+    <zorder>Detection_Objects</zorder>
+    <zorder>Assets_Folder</zorder>
+    <zorder>Substring_Detection</zorder>
+    <zorder>Resolution_Y</zorder>
+    <zorder>Resolution_X</zorder>
+    <zorder>Render_Settings</zorder>
+    <zorder>Start_RL_btn</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

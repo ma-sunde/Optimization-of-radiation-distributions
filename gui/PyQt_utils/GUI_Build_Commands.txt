@@ -1,0 +1,2 @@
+pyuic5 GUI_Light_UE.ui -o GUI_Light_UE.py 
+pyrcc5 res.qrc -o res.py

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="image">
+    <file>IPeG_Logo.png</file>
+    <file>Background.png</file>
+  </qresource>
+</RCC>
